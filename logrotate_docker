@@ -1,0 +1,7 @@
+/var/log/docker/*/*.log {
+    size 1k
+    copytruncate
+    dateext
+    rotate 10
+    create 0644 root root
+}
