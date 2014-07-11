@@ -9,7 +9,7 @@ VOLUME /var/log/docker
 ENV LOG_DIR /var/log/docker/logrotate
 
 # Add logrotate configuration for Docker logs
-ADD logrotate_docker /etc/logrotate.d/logrotate_docker.conf
+ADD logrotate_docker.conf /etc/logrotate.d/logrotate_docker.conf
 
 # Add hourly crontab job 
 ADD logrotate_hourly /etc/cron.hourly/logrotate_hourly
