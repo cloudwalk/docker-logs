@@ -12,4 +12,4 @@ sudo docker run --name logs -v /var/log/docker:/var/log/docker -d -i cloudwalk/l
 
 We use the `-v` flag to bind host's to container's mount points. In case we want to bind different directories, note the order: `-v /host/dir:/container/dir`.
 
-[logrotate_docker]:logrotate_docker.conf
+[logrotate_docker.conf]:logrotate_docker.conf
