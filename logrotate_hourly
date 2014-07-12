@@ -1,3 +1,0 @@
-#!/bin/sh
-
-/usr/sbin/logrotate  -v /etc/logrotate.d/logrotate_docker >> $LOG_DIR/logrotate.log 2>&1 
