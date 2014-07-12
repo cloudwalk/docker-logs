@@ -7,7 +7,7 @@ Additionaly, if we want logs persistence, we can bind it to host's `/var/log/doc
 ## Usage
 
 ```
-sudo docker run --name logs -v /var/log/docker:/var/log/docker -d -i cloudwalk/logs
+sudo docker run --name logs -v /var/log/docker:/var/log/docker -d cloudwalk/logs
 ```
 
 We use the `-v` flag to bind host's to container's mount points. In case we want to bind different directories, note the order: `-v /host/dir:/container/dir`.
