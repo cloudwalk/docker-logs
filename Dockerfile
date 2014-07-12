@@ -1,6 +1,9 @@
-FROM ubuntu:14.04
+FROM ubuntu
 
-MAINTAINER Allan Costa "allan@cloudwalk.io"
+MAINTAINER Allan Costa <allan@cloudwalk.io>
+
+# Install logrotate
+RUN apt-get install -y logrotate
 
 # Volume mounted inside the container
 VOLUME /var/log/docker
@@ -10,9 +13,6 @@ ENV LOG_DIR /var/log/docker/logrotate
 
 # Add logrotate configuration for Docker logs
 ADD logrotate_docker.conf /etc/logrotate.d/logrotate_docker.conf
-
-# Add hourly crontab job 
-ADD logrotate_hourly /etc/cron.hourly/logrotate_hourly
 
 # Add startup script to create logs dir and keep container alive
 ADD startup.sh /usr/local/bin/startup.sh
