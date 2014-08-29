@@ -1,5 +1,7 @@
 # CloudWalk Docker logs
 
+[![Docker build](http://dockeri.co/image/cloudwalk/logs)](https://registry.hub.docker.com/u/cloudwalk/logs/)
+
 This is a container that mounts `/var/log/docker` for others containers to use as a centralized log repository. The only process executed inside the container is `logrotate`, executed twice a day to keep the size of our logs files bounded. You can configure `logrotate` in file [logrotate_docker.conf]
 
 Additionaly, if we want logs persistence, we can bind it to host's `/var/log/docker`, so that we don't lose our logs data in case of container's failure.
